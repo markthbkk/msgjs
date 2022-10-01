@@ -92,7 +92,7 @@
 .message {
     margin-top: 2vh;
   border-radius: 5px;
-  width: 70%;
+  width: 90%;
   display: flex;
   background: darkgray;
   display: flex;
@@ -115,7 +115,7 @@
   text-align: center;
   padding-top: 1.5vh;
   padding-bottom: 1.5vh;
-  font-size: 1rem;
+  font-size: 1.7rem;
   font-family: Mulish;
   font-weight: 500;
 }
@@ -137,7 +137,7 @@
   text-align: center;
   padding-top: 1.5vh;
   padding-bottom: 1.5vh;
-  font-size: 1.5 rem;
+  font-size: 1.7 rem;
   font-family: Mulish;
   font-weight: 500;
 }
@@ -150,7 +150,7 @@
   text-align: center;
   padding-top: 1.5vh;
   padding-bottom: 1.5vh;
-  font-size: 1.5 rem;
+  font-size: 1.7 rem;
   font-family: Mulish;
   font-weight: 500;
 }
