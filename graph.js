@@ -1,4 +1,4 @@
-let last24Hours = new Date(new Date().setHours(new Date().getHours() - 24));
+let last24Hours = new Date(new Date().setHours(new Date().getHours() - 31));
 
 const yyyy = last24Hours.getFullYear();
 let mm = last24Hours.getMonth() + 1;
