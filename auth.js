@@ -6,7 +6,7 @@ const msalConfig = {
     authority:
       "https://login.microsoftonline.com/c522dff4-9854-44bf-ae7f-7871ac71123a",
     // redirectUri: "http://localhost:8080",
-    redirectUri: "https://192.168.1.100:8080",
+    redirectUri: "https://markthbkk.github.io/msgjs/",
   },
 };
 const msalRequest = { scopes: [] };
