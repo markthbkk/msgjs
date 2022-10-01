@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#frame {
+  display: flexbox;
+  flex-wrap: wrap;
+}
+
+#main-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+  margin-top: 2vh;
+  font-size: 62.5%;
+  font-family: "Mulish", sans-serif;
+  width: min(1000px, 100vw);
+  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+#userName {
+  width: 100%;
+  background-color: rgb(9, 5, 65);
+  color: white;
+  text-align: center;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  font-size: 1.5rem;
+  font-family: Mulish;
+  font-weight: 500;
+}
+
+#signinDiv {
+  padding-top: 2vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+
+  margin-top: 2vh;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button-hidden {
+
+    display: none;
+
+}
+
+#button button {
+  /* border-top: 1px solid black; */
+  border-radius: 5px;
+  height: 3.5vh;
+  width: 20%;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  border: none;
+}
+
+#mailData {
+  margin-top: 2vh;
+  width: min(1000px, 100vw);
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-hidden {
+
+  display: none;
+}
+
+.message {
+    margin-top: 2vh;
+  border-radius: 5px;
+  width: 70%;
+  display: flex;
+  background: darkgray;
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.message:hover {
+
+  cursor: pointer;
+}
+
+.messageTitle {
+  border-radius: 5px;
+  width: 100%;
+  background-color: darkgray;
+  color: black;
+  text-align: center;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  font-size: 1rem;
+  font-family: Mulish;
+  font-weight: 500;
+}
+
+.messageDetails {
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.messageSender {
+  border-bottom-left-radius: 5px;
+  width: 50%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  font-size: 1.5 rem;
+  font-family: Mulish;
+  font-weight: 500;
+}
+
+.messageReceivedDateTime {
+  border-bottom-right-radius: 5px;
+  width: 50%;
+  background-color: rgb(71, 93, 133);
+  color: white;
+  text-align: center;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  font-size: 1.5 rem;
+  font-family: Mulish;
+  font-weight: 500;
+}
