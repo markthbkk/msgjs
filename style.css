@@ -154,3 +154,12 @@
   font-family: Mulish;
   font-weight: 500;
 }
+
+@media (min-width: 1000px) {
+
+.messageReceivedDateTime, .messageSender, .messageTitle {
+
+  font-size: 1.3rem;
+}
+
+}
