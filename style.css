@@ -165,7 +165,8 @@
 }
 
 #showAllButton {
-
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
   width: 100%;
   background-color: rgb(9, 5, 65);
   color: white;
