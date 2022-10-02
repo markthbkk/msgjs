@@ -24,6 +24,8 @@ async function displayUI() {
 
 const messageDataDiv = document.getElementById("mailData");
 
+const showAllButton = document.getElementById("showAllButton");
+
 messageDataDiv.style = "display: block";
 
 async function retrieveTLFs() {
@@ -259,4 +261,23 @@ function buildHTMLMessageDivs(finalMessagesArray) {
     
     })
   })
+
+  showAllButton.addEventListener("click", showAllMessages())
 }
+
+function showAllMessages() {
+ 
+  const messagesColl = document.getElementsByClassName("message");
+
+  const messages = Array.from(messagesColl);
+
+  messages.forEach(function (el) {
+    
+         const messagePage = el.dataset.weblink;
+
+      window.open(messagePage, "_blank")
+    });
+  }
+
+
+

@@ -155,6 +155,20 @@
   font-weight: 500;
 }
 
+#showAllButton {
+
+width: 100%;
+  background-color: rgb(9, 5, 65);
+  color: white;
+  text-align: center;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+  font-size: 1.5rem;
+  font-family: Mulish;
+  font-weight: 500;
+
+}
+
 @media (min-width: 600px) {
 
 .messageReceivedDateTime, .messageSender, .messageTitle {
