@@ -263,6 +263,8 @@ function buildHTMLMessageDivs(finalMessagesArray) {
   })
 
   showAllButton.addEventListener("click", showAllMessages())
+
+  showAllButton.classList.toggle("button-hidden");
 }
 
 function showAllMessages() {
