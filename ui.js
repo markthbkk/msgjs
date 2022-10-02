@@ -187,7 +187,7 @@ async function buildHTMLMessageDivsInputArray() {
 
         allMessagesArray.push(msgObj);
 
-console.log(allMessagesArray[allMessagesArray.length - 1])
+console.log(msgObj);
       });
       count = count + 1;
     }
