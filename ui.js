@@ -186,6 +186,8 @@ async function buildHTMLMessageDivsInputArray() {
         msgObj.webLink = mail.webLink;
 
         allMessagesArray.push(msgObj);
+
+console.log(allMessagesArray)
       });
       count = count + 1;
     }
