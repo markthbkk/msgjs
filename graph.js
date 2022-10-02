@@ -1,4 +1,4 @@
-// let last24Hours = new Date(new Date().setHours(new Date().getHours() - 31));
+let last24Hours = new Date(new Date().setHours(new Date().getHours() - 24));
 
 // const yyyy = last24Hours.getFullYear();
 // let mm = last24Hours.getMonth() + 1;
@@ -9,9 +9,9 @@
 
 // const formattedLast24Hours = yyyy + "-" + mm + "-" + dd;
 
-const oneDayAgo = new Date().getTime() - (1 * 24 * 60 * 60 * 1000)
+// const oneDayAgo = new Date().getTime() - (1 * 24 * 60 * 60 * 1000)
 
-const oneDayAgoDateTime = new Date(oneDayAgo)
+// const oneDayAgoDateTime = new Date(oneDayAgo)
 
 let chulaFolder
 
@@ -96,7 +96,7 @@ async function getMessages(mailFldr) {
     
             return await graphClient
               .api(`/me/mailFolders/${mailFldr.id}/messages?$top=5`)
-              .filter(`receivedDateTime ge 2022-10-01T22:00:00Z`)
+              .filter(`receivedDateTime ge ${last24Hours}`)
               .select("sender,subject,weblink,receivedDateTime")
               .get();
     
