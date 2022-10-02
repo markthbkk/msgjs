@@ -164,7 +164,15 @@ async function buildHTMLMessageDivsInputArray() {
     console.log(fldr.displayName);
 
     if (thisFolderMessages.value.length > -1) {
-      thisFolderMessages.value.forEach(function showMessageInfo(mail) {
+
+      let tempMessagesArray = new Array(thisFolderMessages.value.length);
+
+      console.log(tempMessagesArray);
+
+      thisFolderMessages.value.forEach(function showMessageInfo(mail, index) {
+
+        tempMessagesArray[index] = {}
+
         console.log(
           mail.subject,
           mail.sender.emailAddress.name,
@@ -180,14 +188,21 @@ async function buildHTMLMessageDivsInputArray() {
         let recdDateTimeStr = `${recdDateTime.getDate()}/${
           recdDateTime.getMonth() + 1
         }/${recdDateTime.getFullYear()} ${recdDateTime.getHours()}:${minutes} `;
-        msgObj.subject = mail.subject;
-        msgObj.sender = mail.sender.emailAddress.name;
-        msgObj.receivedDateTime = recdDateTimeStr;
-        msgObj.webLink = mail.webLink;
+        // msgObj.subject = mail.subject;
+        // msgObj.sender = mail.sender.emailAddress.name;
+        // msgObj.receivedDateTime = recdDateTimeStr;
+        // msgObj.webLink = mail.webLink;
 
-        allMessagesArray.push(msgObj);
+        tempMessagesArray[index].subject = mail.subject;
+        tempMessagesArray[index].sender = mail.sender.emailAddress.name;
+        tempMessagesArray[index].receivedDateTime = recdDateTimeStr;
+        tempMessagesArray[index].webLink = mail.webLink;
 
-console.log(msgObj);
+        console.log(tempMessagesArray[index]);
+
+        allMessagesArray.push(tempMessagesArray[index]);
+
+
       });
       count = count + 1;
     }
