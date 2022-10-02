@@ -11,7 +11,7 @@
 
 const oneDayAgo = new Date().getTime() - (1 * 24 * 60 * 60 * 1000)
 
-const oneDayAgoDateTime = new Date(oneDayAgo)
+const oneDayAgoDateTime = oneDayAgo.getTime()
 
 let chulaFolder
 
@@ -96,7 +96,7 @@ async function getMessages(mailFldr) {
     
             return await graphClient
               .api(`/me/mailFolders/${mailFldr.id}/messages?$top=1`)
-              .filter(`receivedDateTime ge ${oneDayAgo}`)
+              .filter(`receivedDateTime ge ${oneDayAgoDateTime}`)
               .select("sender,subject,weblink,receivedDateTime")
               .get();
     
