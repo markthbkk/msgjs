@@ -95,7 +95,7 @@ async function getMessages(mailFldr) {
 
     
             return await graphClient
-              .api(`/me/mailFolders/${mailFldr.id}/messages?$top=1`)
+              .api(`/me/mailFolders/${mailFldr.id}/messages?$top=5`)
               .filter(`receivedDateTime ge 2022-10-01`)
               .select("sender,subject,weblink,receivedDateTime")
               .get();
