@@ -262,12 +262,12 @@ function buildHTMLMessageDivs(finalMessagesArray) {
     })
   })
 
-  showAllButton.addEventListener("click", showAllMessages())
+  showAllButton.addEventListener("click", openAllMessages())
 
   showAllButton.classList.toggle("button-hidden");
 }
 
-function showAllMessages() {
+function openAllMessages() {
  
   const messagesColl = document.getElementsByClassName("message");
 

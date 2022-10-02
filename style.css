@@ -153,9 +153,9 @@
 
 #showAllButtonOuterDiv {
 
-  margin-top: 2.5vh;
+  margin-top: 3.5vh;
   margin-bottom: 2.5vh;
-  width: 50%;
+  width: 50vw;
   display: flex;
   flex-wrap: wrap;
   margin-inline: auto;
