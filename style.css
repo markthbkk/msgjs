@@ -176,6 +176,11 @@
 
 }
 
+#showAllButton:hover {
+
+  cursor: pointer;
+}
+
 .button-hidden {
 
     display: none;

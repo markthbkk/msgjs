@@ -275,7 +275,9 @@ function showAllMessages() {
 
   messages.forEach(function (el) {
     
-         const messagePage = el.dataset.weblink;
+    const messagePage = el.dataset.weblink;
+    
+    console.log(el.dataset.webLink)
 
       window.open(messagePage, "_blank")
     });
