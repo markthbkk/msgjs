@@ -279,7 +279,7 @@ function openAllMessages() {
     
     console.log(messagePage)
 
-      window.open(messagePage, "_blank")
+      window.open(messagePage)
     });
   }
 
