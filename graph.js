@@ -11,7 +11,7 @@
 
 const oneDayAgo = new Date().getTime() - (1 * 24 * 60 * 60 * 1000)
 
-const oneDayAgoDateTime = new Date(oneDayAgo).getTime()
+const oneDayAgoDateTime = new Date(oneDayAgo)
 
 let chulaFolder
 
