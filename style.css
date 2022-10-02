@@ -57,11 +57,7 @@
   justify-content: center;
 }
 
-.button-hidden {
 
-    display: none;
-
-}
 
 #button button {
   /* border-top: 1px solid black; */
@@ -166,6 +162,12 @@ width: 50%;
   font-size: 1.5rem;
   font-family: Mulish;
   font-weight: 500;
+
+}
+
+.button-hidden {
+
+    display: none;
 
 }
 
