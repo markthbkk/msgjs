@@ -28,12 +28,17 @@
           </a>
         </div>
         <div class="button button-hidden" id="button">
-          <button onclick="buildHTMLMessageDivsInputArray()">Get Message Data</button>
+          <button onclick="buildHTMLMessageDivsInputArray()">
+            Get Message Data
+          </button>
         </div>
       </div>
-      <div id="mailData" style = "display: none">
+      <div id="mailData" style="display: none"></div>
+      <div id="showAllButtonOuterDiv">
+        <div class="button-hidden" id="showAllButton">
+          Open all messages in new tabs
+        </div>
       </div>
-      <div class="button-hidden" id="showAllButton">Open all messages in new tabs</div>
     </div>
     <script
       src="https://alcdn.msauth.net/browser/2.1.0/js/msal-browser.min.js"
