@@ -177,7 +177,7 @@ async function buildHTMLMessageDivsInputArray() {
         let minutes = recdDateTime.getMinutes()
         if (minutes < 10) { minutes = `0${minutes}`}
 
-        let recdDateTimeStr = `${recdDateTime.getDay()}/${
+        let recdDateTimeStr = `${recdDateTime.getDate()}/${
           recdDateTime.getMonth() + 1
         }/${recdDateTime.getFullYear()} ${recdDateTime.getHours()}:${minutes} `;
         msgObj.subject = mail.subject;
