@@ -273,11 +273,11 @@ function showAllMessages() {
 
   const messages = Array.from(messagesColl);
 
-  messages.forEach(function (el) {
+  messages.forEach(function (msg) {
     
-    const messagePage = el.dataset.weblink;
+    const messagePage = msg.dataset.weblink;
     
-    console.log(el.dataset.webLink)
+    console.log(messagePage)
 
       window.open(messagePage, "_blank")
     });
