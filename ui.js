@@ -20,8 +20,6 @@ async function displayUI() {
   content.style = "display: block";
 }
 
-
-
 const messageDataDiv = document.getElementById("mailData");
 
 const showAllButton = document.getElementById("showAllButton");
@@ -144,8 +142,6 @@ async function retrieveTargetFolderList() {
   return targetFolderArray;
 }
 
-
-
 async function buildHTMLMessageDivsInputArray() {
   const targetFolderArray = await retrieveTargetFolderList();
 
@@ -166,14 +162,12 @@ async function buildHTMLMessageDivsInputArray() {
     console.log(fldr.displayName);
 
     if (thisFolderMessages.value.length > -1) {
-
       let tempMessagesArray = new Array(thisFolderMessages.value.length);
 
       console.log(tempMessagesArray);
 
       thisFolderMessages.value.forEach(function showMessageInfo(mail, index) {
-
-        tempMessagesArray[index] = {}
+        tempMessagesArray[index] = {};
 
         console.log(
           mail.subject,
@@ -184,8 +178,10 @@ async function buildHTMLMessageDivsInputArray() {
 
         let recdDateTime = new Date(mail.receivedDateTime);
 
-        let minutes = recdDateTime.getMinutes()
-        if (minutes < 10) { minutes = `0${minutes}`}
+        let minutes = recdDateTime.getMinutes();
+        if (minutes < 10) {
+          minutes = `0${minutes}`;
+        }
 
         let recdDateTimeStr = `${recdDateTime.getDate()}/${
           recdDateTime.getMonth() + 1
@@ -203,8 +199,6 @@ async function buildHTMLMessageDivsInputArray() {
         console.log(tempMessagesArray[index]);
 
         allMessagesArray.push(tempMessagesArray[index]);
-
-
       });
       count = count + 1;
     }
@@ -244,44 +238,36 @@ function buildHTMLMessageDivs(finalMessagesArray) {
 
   messageDataDiv.innerHTML = messageHTML;
 
-  const messagesColl = document.getElementsByClassName("message")
+  const messagesColl = document.getElementsByClassName("message");
 
-  const messages = Array.from(messagesColl)
+  const messages = Array.from(messagesColl);
 
   messages.forEach(function (el) {
-
-    console.log(el)
+    console.log(el);
     el.addEventListener("click", function (e) {
-      
-      console.log(e.target.closest(".message").dataset.weblink)
-      
+      console.log(e.target.closest(".message").dataset.weblink);
+
       const messagePage = e.target.closest(".message").dataset.weblink;
 
-      window.open(messagePage, '_blank').focus();
-    
-    })
-  })
+      window.open(messagePage, "_blank").focus();
+    });
+  });
 
-  showAllButton.addEventListener("click", openAllMessages)
+  showAllButton.addEventListener("click", openAllMessages);
 
   showAllButton.classList.toggle("button-hidden");
 }
 
 function openAllMessages() {
- 
   const messagesColl = document.getElementsByClassName("message");
 
   const messages = Array.from(messagesColl);
 
   messages.forEach(function (msg) {
-    
     const messagePage = msg.dataset.weblink;
-    
-    console.log(messagePage)
 
-      window.open(messagePage)
-    });
-  }
+    console.log(messagePage);
 
-
-
+    window.open(messagePage, "_blank");
+  });
+}

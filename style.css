@@ -98,7 +98,7 @@
   justify-content: center;
 }
 
-.message:hover {
+button:hover, .message:hover {
 
   cursor: pointer;
 }
